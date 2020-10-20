@@ -72,7 +72,7 @@ ENDIF(BUILD_ROS_INTERFACE)
 
 IF(BUILD_HPP_PLUGIN)
   ADD_REQUIRED_DEPENDENCY("roscpp")
-  add_project_dependency("dynamic_graph_bridge_msgs")
+  add_project_dependency("dynamic_graph_bridge_msgs" REQUIRED)
 endif(BUILD_HPP_PLUGIN)
 
 ADD_REQUIRED_DEPENDENCY("omniORB4")

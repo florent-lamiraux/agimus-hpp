@@ -97,7 +97,8 @@ IF(BUILD_HPP_PLUGIN)
     ${ALL_IDL_CPP_STUBS}
     ${ALL_IDL_CPP_IMPL_STUBS}
     LINK_DEPENDENCIES PUBLIC hpp-corbaserver::hpp-corbaserver
-    PKG_CONFIG_DEPENDENCIES omniORB4 roscpp dynamic_graph_bridge_msgs)
+    dynamic_graph_bridge_msgs::dynamic_graph_bridge_msgs
+    PKG_CONFIG_DEPENDENCIES omniORB4 roscpp)
 
   ADD_DEPENDENCIES (agimus-hpp generate_idl_cpp generate_idl_python)
 ELSE(BUILD_HPP_PLUGIN)
