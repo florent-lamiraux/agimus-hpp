@@ -45,9 +45,8 @@ namespace hpp {
         discretization_ =
           Discretization::create (server_->problemSolver()->robot());
 
-        corbaServer::agimus_impl::Discretization* servant =
-          new corbaServer::agimus_impl::Discretization (server_->parent(),
-              discretization_);
+        agimus_impl::Discretization* servant =
+          new agimus_impl::Discretization (server_->parent(), discretization_);
         servant->persistantStorage(false);
 
         return corbaServer::makeServant<agimus_idl::Discretization_ptr>
