@@ -29,8 +29,9 @@
 import rospy, hpp.corbaserver
 import numpy as np
 from .client import HppClient
-from agimus_sot_msgs.msg import *
-from agimus_sot_msgs.srv import *
+from agimus_sot_msgs.msg import ReadSubPath
+from agimus_sot_msgs.srv import GetInt, GetBasePoseAtParam, SetJointNames, \
+    SetString
 import agimus_hpp.ros_tools as ros_tools
 from .tools import *
 from dynamic_graph_bridge_msgs.msg import Vector
